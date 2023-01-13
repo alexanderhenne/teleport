@@ -1,5 +1,6 @@
 import os
 import argparse
+import logging
 
 from teleport import generate_client_hint, get_device_token, connect_device
 
