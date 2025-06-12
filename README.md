@@ -8,4 +8,4 @@ Steps to use it:
  3. Generate a PIN from within the AmpliFi app.
  4. `python main.py --pin AB123`, replacing AB123 with the PIN from step 2.
  5. Paste the outputted WireGuard config into a WireGuard client and connect.
- 6. Repeat steps 3 and 4 everytime you want to connect, but without the `--pin` argument.
+ 6. Repeat steps 4 and 5 everytime you want to connect, but without the `--pin` argument.
