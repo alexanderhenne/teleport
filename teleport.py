@@ -211,12 +211,9 @@ def connect_device(deviceToken):
     config = RTCConfiguration([stun])
     pc = RTCPeerConnection(config)
 
-    coro = _connect_device_peer(pc, deviceToken)
-
-    loop = asyncio.get_event_loop()
     try:
-        return loop.run_until_complete(coro)  
+        return asyncio.run(_connect_device_peer(pc, deviceToken))
     except KeyboardInterrupt:
         pass
     finally:
-        loop.run_until_complete(pc.close())
+        asyncio.run(pc.close())
